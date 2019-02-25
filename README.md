@@ -6,4 +6,4 @@ An app where the user can browse through different recipes and is able to access
 
 ## User Story
 
-> Natalie loves to cook. She craves for an app that could have recipe ideas and where she could saver her own recipes.
+> Natalie loves to cook. She craves for an app that could have recipe ideas and where she could save her own recipes.

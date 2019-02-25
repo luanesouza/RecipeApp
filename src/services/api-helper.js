@@ -1,8 +1,10 @@
 import axios from 'axios';
+const BASE_URL = `https://www.food2fork.com/api/search?key=`;
+const API_KEY = `78df59383247d284adbe0d6d8a40e094`;
 
-  async function getRecipes(){
+  async function getRecipes(mainingredient){
   try {
-    const recipes = await axios.get(`https://www.food2fork.com/api/search?key=6598e71afb10fe0eb40b8e86b29cd0c6&q=chicken%20breast&page=2`);
+    const recipes = await axios.get(`${BASE_URL}${API_KEY}&q=${mainingredient}&page=1`);
     return recipes.data.recipes;
   }
   catch(error) {
