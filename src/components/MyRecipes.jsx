@@ -13,12 +13,12 @@ class MyRecipes extends Component {
   render() {
   return(
     <div className="MyRecipes">
-      Title:
-      <input type="text" />
-      Ingredients:
-      <input type="text" />
-      Instructions:
-      <input type="text" />
+      <p>Title ✎ </p>
+      <input className="titleInput" type="text" />
+      <p>Ingredients ✎ </p>
+      <input className="ingInput" type="text" />
+      <p>Instructions ✎ </p>
+      <textarea className="instInput"/>
       <input type="submit" value="Submit"/>
     </div>
     )

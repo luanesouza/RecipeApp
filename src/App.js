@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import getRecipes from './services/api-helper';
 import Header from './components/Header';
+import HomePage from './components/HomePage';
 import MyRecipes from './components/MyRecipes';
 import { Route, Link } from 'react-router-dom';
 import GetEachTitle from './components/GetEachTitle';
@@ -35,7 +36,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <GetEachTitle recipes={this.state.recipes} />
           <div className="icons">
             <Link to="/">
               <img
@@ -51,35 +51,17 @@ class App extends Component {
             </Link>
           </div>
         <main>
-            <Route exact path="/" />
+        <GetEachTitle recipes={this.state.recipes} />
+            <Route exact path="/" component={(props) => (
+              <HomePage
+              {...props}
+              getInput={this.getInput}
+              logInput={this.logInput}
+              mainIngredient={this.state.mainIngredient}/>
+            )}/>
             <Route path="/myRecipes" component={MyRecipes} />
         </main>
-          <div className="inputArea">
-            <form className="fixedInput">
-              <h3 className="inputTitle">
-              Get Recipes by
-              <br/>
-               Main Ingredient or by
-               <br/>
-               Preparation Time </h3>
-              <input
-              className="inputIngredient"
-              type="text"
-              placeholder="Get Inspired..."
-              name='mainIngredient'
-              value={this.state.mainIngredient}
-              onChange={this.getInput} />
 
-              <input
-              className="submitIngredient"
-              type="submit"
-              value="Submit"
-              onClick={(ev) => {
-                ev.preventDefault();
-                this.logInput(this.state.mainIngredient);
-              }} />
-            </form>
-          </div>
       </div>
     );
   }

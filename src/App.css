@@ -18,14 +18,38 @@
  width: 55px;
  margin: 100%;
 }
+.MyRecipes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
 
-/* .images{
+}
+
+.titleInput {
+  width: 300px;
+  height: 30px;
+}
+.ingInput {
+  width: 300px;
+  height: 30px;
+}
+.instInput {
+  width: 300px;
+  height: 400px;
+}
+
+p {
+  color: white;
+  font-weight: bold;
+}
+.images{
   display: flex;
   border: 3px black solid;
   justify-content:flex-start;
   margin: 15px;
   padding: 10px;
- } */
+ }
 .inputIngredient{
   width: 400px;
   height: 30px;
