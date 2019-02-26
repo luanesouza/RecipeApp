@@ -35,34 +35,51 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Link to="/">
-          <img
-          className="home"
-          src="http://www.clker.com/cliparts/u/j/K/w/1/5/home-icon-md.png"/>
-        </Link>
-
-        <nav>
-          <div className="Inspiration">
-            <Link to="/getInspired"> NEED INSPIRATION? </Link>
+        <GetEachTitle recipes={this.state.recipes} />
+          <div className="icons">
+            <Link to="/">
+              <img
+              className="home"
+              src="http://www.clker.com/cliparts/u/j/K/w/1/5/home-icon-md.png"
+              alt=""/>
+            </Link>
+            <Link to="/myRecipes">
+              <img
+              className="home"
+              src="http://icongal.com/gallery/image/43845/notes_add.png"
+              alt="" />
+            </Link>
           </div>
-            <br/>
-          <div className="Inspiration">
-            <Link to="/myRecipes"> YOUR RECIPES </Link>
-          </div>
-        </nav>
         <main>
             <Route exact path="/" />
             <Route path="/myRecipes" component={MyRecipes} />
-            <Route path="/getInspired"
-              component={(props) => (
-                <GetEachTitle {...props}
-                  recipes ={this.state.recipes}
-                  mainIngredient={this.state.mainIngredient}
-                  onSubmit={this.logInput}
-                  onChange={this.getInput} />
-            )}/>
-
         </main>
+          <div className="inputArea">
+            <form className="fixedInput">
+              <h3 className="inputTitle">
+              Get Recipes by
+              <br/>
+               Main Ingredient or by
+               <br/>
+               Preparation Time </h3>
+              <input
+              className="inputIngredient"
+              type="text"
+              placeholder="Get Inspired..."
+              name='mainIngredient'
+              value={this.state.mainIngredient}
+              onChange={this.getInput} />
+
+              <input
+              className="submitIngredient"
+              type="submit"
+              value="Submit"
+              onClick={(ev) => {
+                ev.preventDefault();
+                this.logInput(this.state.mainIngredient);
+              }} />
+            </form>
+          </div>
       </div>
     );
   }

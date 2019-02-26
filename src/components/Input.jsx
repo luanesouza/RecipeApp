@@ -14,7 +14,7 @@ class Input extends Component {
       mainIngredient: ev.target.value
     })
   }
-  render() {
+  render(props) {
   return(
 
     <form className="fixedInput">
@@ -31,10 +31,9 @@ class Input extends Component {
       className="submitIngredient"
       type="submit"
       value="Submit"
-      onSubmit={props.onSubmit()}
-      onClick={(ev, props) => {
+      onClick={(ev) => {
         ev.preventDefault();
-        props.onSubmit();
+        props.logInput();
       }} />
     </form>
   )

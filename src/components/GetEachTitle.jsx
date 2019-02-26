@@ -1,5 +1,4 @@
 import React from 'react';
-import Input from './Input';
 
 function GetEachTitle(props) {
   const { recipes, mainIngredient } = props;
@@ -13,10 +12,6 @@ function GetEachTitle(props) {
           <p>{recipes.title}</p>
         </div>
       ))}
-      <Input
-        onSubmit={props.onSubmit}
-        mainIngredient={mainIngredient}
-        onChange={props.onChange} />
     </div>
 )};
 export default GetEachTitle;
