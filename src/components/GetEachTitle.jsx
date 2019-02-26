@@ -7,10 +7,10 @@ function GetEachTitle(props) {
     <div className="EachRecipe">
       {recipes.map((recipes) => (
         <div key={recipes.recipe_id}>
-        <div className="images">
-          <img src={recipes.image_url} alt="" />
-        </div>
-        <p>{recipes.title}</p>
+          <div className="images">
+            <img src={recipes.image_url} alt="" />
+          </div>
+          <p>{recipes.title}</p>
         </div>
       ))}
       <Input

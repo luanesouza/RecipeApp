@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Input(props){
+class Input extends Component {
+    constructor() {
+      super();
+      this.state = {
+        mainIngredient: ''
+      }
+      this.handleChange = this.handleChange.bind(this);
+    }
+
+  handleChange(ev) {
+    this.setState({
+      mainIngredient: ev.target.value
+    })
+  }
+  render() {
   return(
+
     <form className="fixedInput">
       <h3>Get Recipes by Main Ingredient or by Preparation Time </h3>
       <input
@@ -9,18 +24,19 @@ function Input(props){
       type="text"
       placeholder="Get Inspired..."
       name='mainIngredient'
-      value={props.mainIngredient}
-      onChange={props.onChange} />
+      value={this.state.mainIngredient}
+      onChange={this.handleChange} />
+
       <input
       className="submitIngredient"
       type="submit"
       value="Submit"
-      onClick={(ev) => {
+      onSubmit={props.onSubmit()}
+      onClick={(ev, props) => {
         ev.preventDefault();
-        props.onSubmit(props.mainIngredient);
+        props.onSubmit();
       }} />
     </form>
   )
-}
-
+}}
 export default Input;

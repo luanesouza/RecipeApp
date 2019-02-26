@@ -4,7 +4,6 @@ import Header from './components/Header';
 import MyRecipes from './components/MyRecipes';
 import { Route, Link } from 'react-router-dom';
 import GetEachTitle from './components/GetEachTitle';
-import Input from './components/Input';
 import './App.css';
 
 class App extends Component {
@@ -12,7 +11,7 @@ class App extends Component {
     super();
     this.state = {
       recipes: [],
-      mainIngredient:'beans'
+      mainIngredient:''
     }
     this.getInput = this.getInput.bind(this);
     this.logInput = this.logInput.bind(this);
@@ -25,7 +24,6 @@ class App extends Component {
   }
 
   async logInput(mainIngredient) {
-
     const recipes = await getRecipes(mainIngredient);
     this.setState({
       recipes
@@ -37,7 +35,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Link to="/"> <img className="home" src="http://www.clker.com/cliparts/u/j/K/w/1/5/home-icon-md.png"/> </Link>
+        <Link to="/">
+          <img
+          className="home"
+          src="http://www.clker.com/cliparts/u/j/K/w/1/5/home-icon-md.png"/>
+        </Link>
 
         <nav>
           <div className="Inspiration">
