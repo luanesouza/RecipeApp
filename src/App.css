@@ -1,10 +1,18 @@
 .App {
-  margin: 10px;
-  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://cdn.fstoppers.com/styles/full/s3/media/2017/09/11/autumn_food_photography_0.jpg");
+  background-size: cover;
 }
 
 .EachImage {
  flex: 3;
+}
+
+.home{
+ width: 45px;
+ margin: 100%;
 }
 
 .images{
@@ -13,9 +21,6 @@
   justify-content:flex-start;
   margin: 15px;
   padding: 10px;
-
-
-  /* display: flex; */
 }
 .inputIngredient{
   width: 400px;
@@ -46,4 +51,40 @@ p{
   width: 90px;
   background-color: #FFA630;
   margin: 5px solid black;
+}
+
+.EachRecipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+nav{
+  font-size: 50px;
+  height: 400px;
+  width: 600px;
+  margin-top: 10%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+
+}
+
+.Inspiration {
+  font-family: 'Black Ops One', cursive;
+  animation-name: inspiration;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@@keyframes inspiration {
+
+}
+.Inspiration a:hover{
+  background-color: #fdffea;
+  opacity: .5;
+  color: black;
 }

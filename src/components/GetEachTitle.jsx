@@ -1,8 +1,8 @@
 import React from 'react';
+import Input from './Input';
 
 function GetEachTitle(props) {
-
-  const { recipes } = props;
+  const { recipes, mainIngredient } = props;
   return (
     <div className="EachRecipe">
       {recipes.map((recipes) => (
@@ -13,6 +13,7 @@ function GetEachTitle(props) {
         <p>{recipes.title}</p>
         </div>
       ))}
+      <Input onSubmit={() => this.logInput} mainIngredient={mainIngredient} />
     </div>
 )};
 export default GetEachTitle;

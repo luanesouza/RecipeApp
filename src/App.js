@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import getRecipes from './services/api-helper';
 import Header from './components/Header';
+import MyRecipes from './components/MyRecipes';
 import { Route, Link } from 'react-router-dom';
 import GetEachTitle from './components/GetEachTitle';
+import Input from './components/Input';
 import './App.css';
 
 class App extends Component {
@@ -19,10 +21,10 @@ class App extends Component {
     this.setState({
       mainIngredient: ev.target.value
     })
-    console.log(this.state.mainIngredient);
   }
 
-  async logInput(mainIngredient) {
+  async logInput(mainIngredient, e) {
+    e.preventDefault();
     const recipes = await getRecipes(mainIngredient);
     this.setState({
       recipes
@@ -31,17 +33,28 @@ class App extends Component {
     console.log(this.state.mainIngredient);
   }
 
-  async componentDidMount(){
-
-  }
   render() {
     return (
       <div className="App">
-        <Header />
-        <h3>Get Recipes by Main Ingredient or by Preparation Time </h3>
-        <input className="inputIngredient" type="text" placeholder="Get Inspired..." mainingredient={this.state.mainIngredient} onChange={this.getInput}/>
-        <input className="submitIngredient" type="submit" value="Submit" onClick={(e) => {e.preventDefault(); this.logInput(this.state.mainIngredient)}} />
-        <GetEachTitle recipes={this.state.recipes} />
+        <Link to="/"> <img className="home" src="http://www.clker.com/cliparts/u/j/K/w/1/5/home-icon-md.png"/> </Link>
+
+        <nav>
+          <div className="Inspiration">
+            <Link to="/getInspired"> NEED INSPIRATION? </Link>
+          </div>
+            <br/>
+          <div className="Inspiration">
+            <Link to="/myRecipes"> YOUR RECIPES </Link>
+          </div>
+        </nav>
+        <main>
+            <Route exact path="/" />
+            <Route path="/myRecipes" component={MyRecipes} />
+            <Route path="/getInspired" component={(props) => (
+              <GetEachTitle {...props}  recipes ={this.state.recipes} mainIngredient={this.state.mainIngredient} onSubmit={() => this.logInput()}/>
+            )}/>
+
+        </main>
       </div>
     );
   }
