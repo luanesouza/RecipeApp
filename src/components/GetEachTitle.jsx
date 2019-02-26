@@ -13,7 +13,10 @@ function GetEachTitle(props) {
         <p>{recipes.title}</p>
         </div>
       ))}
-      <Input onSubmit={() => this.logInput} mainIngredient={mainIngredient} />
+      <Input
+        onSubmit={props.onSubmit}
+        mainIngredient={mainIngredient}
+        onChange={props.onChange} />
     </div>
 )};
 export default GetEachTitle;

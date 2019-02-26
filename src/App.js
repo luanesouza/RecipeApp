@@ -12,19 +12,20 @@ class App extends Component {
     super();
     this.state = {
       recipes: [],
-      mainIngredient:''
+      mainIngredient:'beans'
     }
     this.getInput = this.getInput.bind(this);
     this.logInput = this.logInput.bind(this);
   }
   getInput(ev){
+    const { name, value } = ev.target
     this.setState({
-      mainIngredient: ev.target.value
+      [name]: value
     })
   }
 
-  async logInput(mainIngredient, e) {
-    e.preventDefault();
+  async logInput(mainIngredient) {
+
     const recipes = await getRecipes(mainIngredient);
     this.setState({
       recipes
@@ -50,8 +51,13 @@ class App extends Component {
         <main>
             <Route exact path="/" />
             <Route path="/myRecipes" component={MyRecipes} />
-            <Route path="/getInspired" component={(props) => (
-              <GetEachTitle {...props}  recipes ={this.state.recipes} mainIngredient={this.state.mainIngredient} onSubmit={() => this.logInput()}/>
+            <Route path="/getInspired"
+              component={(props) => (
+                <GetEachTitle {...props}
+                  recipes ={this.state.recipes}
+                  mainIngredient={this.state.mainIngredient}
+                  onSubmit={this.logInput}
+                  onChange={this.getInput} />
             )}/>
 
         </main>
