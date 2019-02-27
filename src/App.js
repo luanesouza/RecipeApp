@@ -51,8 +51,6 @@ class App extends Component {
             </Link>
           </div>
         <main>
-        <GetEachTitle recipes={this.state.recipes} />
-
             <Route exact path="/" render={(props) => (
               <HomePage
               {...props}
@@ -61,6 +59,8 @@ class App extends Component {
               mainIngredient={this.state.mainIngredient}/>
             )}/>
             <Route path="/myRecipes" component={MyRecipes} />
+            <GetEachTitle recipes={this.state.recipes} />
+            
         </main>
 
       </div>

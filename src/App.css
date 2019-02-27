@@ -1,12 +1,8 @@
 .App {
-
   background-image: url("https://cdn.fstoppers.com/styles/full/s3/media/2017/09/11/autumn_food_photography_0.jpg");
   background-size: cover;
-  height: 1000px;
-}
-
-.EachImage {
- flex: 3;
+  background-attachment: fixed;
+  background-position: center
 }
 
 .icons {
@@ -16,14 +12,14 @@
 
 .home{
  width: 55px;
- margin: 100%;
+ margin: 10%;
 }
+
 .MyRecipes {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 10px;
-
 }
 
 .titleInput {
@@ -43,17 +39,44 @@ p {
   color: white;
   font-weight: bold;
 }
+
 .images{
-  display: flex;
   border: 3px black solid;
-  margin: 15px;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
+  background-position: center;
+  background-size: contain;
  }
-.inputIngredient{
+
+ .EachImage {
+   height: 400px;
+   width: 300px;
+ }
+
+ .EachRecipe {
+   margin-top: 10%;
+   display: flex;
+   overflow-y: hidden;
+   overflow-x: auto;
+   text-align: center;
+ }
+
+.link {
+  font-size: 25px;
+  color: white;
+}
+
+.recipeTitle {
+  background-color: red;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+
+.inputIngredient {
   width: 400px;
   height: 30px;
   text-align: center;
-  margin: 10px;
   padding: 5px;
   font-size: 20px;
   background-color: #EBD4CB;
@@ -64,20 +87,11 @@ p {
   border-color: #FFA630;
 }
 
-.header{
+.header {
   margin: 5px;
 }
 
-img {
-  width: 250px;
-  height: auto;
-}
-
-p{
-  font-size: 25px;
-}
-
-.submitIngredient{
+.submitIngredient {
   font-size: 20px;
   height: 40px;
   width: 90px;
@@ -92,12 +106,8 @@ p{
 .submitIngredient:hover {
   border-color: #FFA630;
 }
-/* .EachRecipe {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-} */
-nav{
+
+nav {
   font-size: 50px;
   height: 400px;
   width: 600px;
@@ -120,7 +130,10 @@ a {
 
 .inputArea {
   text-align: center;
-
+  background-image: url("https://cdn.fstoppers.com/styles/full/s3/media/2017/09/11/autumn_food_photography_0.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* .Inspiration a:hover{
