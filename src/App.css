@@ -46,7 +46,6 @@ p {
 .images{
   display: flex;
   border: 3px black solid;
-  justify-content:flex-start;
   margin: 15px;
   padding: 10px;
  }
@@ -57,6 +56,12 @@ p {
   margin: 10px;
   padding: 5px;
   font-size: 20px;
+  background-color: #EBD4CB;
+  cursor: pointer;
+}
+
+.inputIngredient:hover {
+  border-color: #FFA630;
 }
 
 .header{
@@ -70,24 +75,28 @@ img {
 
 p{
   font-size: 25px;
-  text-align: center;
 }
 
 .submitIngredient{
   font-size: 20px;
   height: 40px;
   width: 90px;
-  background-color: #FFA630;
+  background-color: #00A6A6;
   margin: 15px solid black;
   border-radius: 5px;
   font-family: 'Raleway', serif;
+  box-shadow: 3px 3px #00A6A6;
+  cursor: pointer;
 }
 
-.EachRecipe {
+.submitIngredient:hover {
+  border-color: #FFA630;
+}
+/* .EachRecipe {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
+} */
 nav{
   font-size: 50px;
   height: 400px;

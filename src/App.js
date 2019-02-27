@@ -52,7 +52,8 @@ class App extends Component {
           </div>
         <main>
         <GetEachTitle recipes={this.state.recipes} />
-            <Route exact path="/" component={(props) => (
+
+            <Route exact path="/" render={(props) => (
               <HomePage
               {...props}
               getInput={this.getInput}

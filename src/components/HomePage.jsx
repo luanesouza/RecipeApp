@@ -6,11 +6,7 @@ function HomePage(props) {
     <div className="inputArea">
       <form className="fixedInput">
         <h3 className="inputTitle">
-        Get Recipes by
-        <br/>
-         Main Ingredient or by
-         <br/>
-         Preparation Time </h3>
+        Search Recipes </h3>
         <input
         className="inputIngredient"
         type="text"
