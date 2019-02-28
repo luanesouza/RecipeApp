@@ -18,5 +18,5 @@ An app where the user can browse through different recipes and is able to access
 ## Issues With First Palette
 
 ## Home Page
-![HomePage](/images.homePage1.png)
+![HomePage](src/images.homePage1.png)
 ## Issues encountered
