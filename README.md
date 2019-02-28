@@ -25,11 +25,14 @@ The palette I went with is a combination of neutral colors, which makes so that 
 
 ![PalleteTwo](images/palette.png)
 
-## Issues With First Palette
-
 ## Home Page
+
+### MVP
+
 ![HomePage](images/homePage1.png)
 
 ## Search Results
+
 ![HomePage](/images/homePage.png)
+
 ## Issues encountered
