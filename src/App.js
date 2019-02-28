@@ -44,7 +44,7 @@ class App extends Component {
             </Link>
             <Link to="/myRecipes">
               <img
-              className="home"
+              className="home rec"
               src="http://cdn.onlinewebfonts.com/svg/img_328479.png"
               alt="" />
             </Link>
