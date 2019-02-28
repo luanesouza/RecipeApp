@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import getRecipes from './services/api-helper';
 import HomePage from './components/HomePage';
+import SearchPage from './components/SearchPage';
 import MyRecipes from './components/MyRecipes';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
@@ -40,18 +41,27 @@ class App extends Component {
               <img
               className="home"
               src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png"
-              alt=""/>
+              alt="home"/>
             </Link>
+
+            <Link to="/searchRecipes" >
+              <img
+              className="home"
+              src="https://static.thenounproject.com/png/43533-200.png"
+              alt="search" />
+            </Link>
+
             <Link to="/myRecipes">
               <img
-              className="home rec"
+              className="home"
               src="http://cdn.onlinewebfonts.com/svg/img_328479.png"
               alt="" />
             </Link>
           </div>
           <main>
-              <Route exact path="/" render={(props) => (
-                <HomePage
+              <Route exact path="/" component={HomePage}/>
+              <Route path="/searchRecipes" render={(props) => (
+                <SearchPage
                 {...props}
                 getInput={this.getInput}
                 logInput={this.logInput}
