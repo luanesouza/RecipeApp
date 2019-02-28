@@ -4,7 +4,6 @@ import Header from './components/Header';
 import HomePage from './components/HomePage';
 import MyRecipes from './components/MyRecipes';
 import { Route, Link } from 'react-router-dom';
-import GetEachTitle from './components/GetEachTitle';
 import './App.css';
 
 class App extends Component {
@@ -36,6 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="wrapper">
           <div className="icons">
             <Link to="/">
               <img
@@ -50,19 +50,18 @@ class App extends Component {
               alt="" />
             </Link>
           </div>
-        <main>
-            <Route exact path="/" render={(props) => (
-              <HomePage
-              {...props}
-              getInput={this.getInput}
-              logInput={this.logInput}
-              mainIngredient={this.state.mainIngredient}/>
-            )}/>
-            <Route path="/myRecipes" component={MyRecipes} />
-            <GetEachTitle recipes={this.state.recipes} />
-            
-        </main>
-
+          <main>
+              <Route exact path="/" render={(props) => (
+                <HomePage
+                {...props}
+                getInput={this.getInput}
+                logInput={this.logInput}
+                mainIngredient={this.state.mainIngredient}
+                recipes={this.state.recipes}/>
+              )}/>
+              <Route path="/myRecipes" component={MyRecipes} />
+          </main>
+        </div>
       </div>
     );
   }

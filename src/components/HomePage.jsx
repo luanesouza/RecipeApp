@@ -1,12 +1,15 @@
 import React from 'react';
 
+import GetEachTitle from './GetEachTitle';
+
 function HomePage(props) {
   const { mainIngredient, getInput, logInput } = props
   return (
     <div className="inputArea">
       <form className="fixedInput">
         <h3 className="inputTitle">
-        Search Recipes </h3>
+        SEARCH RECIPES
+        </h3>
         <input
         className="inputIngredient"
         type="text"
@@ -24,6 +27,7 @@ function HomePage(props) {
           logInput(mainIngredient);
         }} />
       </form>
+      <GetEachTitle recipes={props.recipes} />
     </div>
   )
 }

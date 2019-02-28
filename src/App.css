@@ -1,13 +1,22 @@
 .App {
+
+}
+
+.wrapper {
   background-image: url("https://cdn.fstoppers.com/styles/full/s3/media/2017/09/11/autumn_food_photography_0.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-position: center
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
 }
 
 .icons {
   display: flex;
   justify-content:space-around;
+  background-color: black;
 }
 
 .home{
@@ -16,23 +25,46 @@
 }
 
 .MyRecipes {
+  background-image: url('http://febreframeworks.com/wp-content/uploads/stephaniebough_food18.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px;
+  height: 100vh;
 }
 
 .titleInput {
   width: 300px;
   height: 30px;
+  margin-left: 50px;
 }
 .ingInput {
   width: 300px;
   height: 30px;
+  margin-left: 50px;
 }
 .instInput {
   width: 300px;
   height: 400px;
+  margin-left: 50px;
+}
+
+.MyRecipesTitle {
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.MyRecipesButton {
+  font-size: 20px;
+  height: 40px;
+  width: 90px;
+  background-color: #00A6A6;
+  border-radius: 5px;
+  box-shadow: 3px 3px #00A6A6;
+  cursor: pointer;
 }
 
 p {
@@ -42,7 +74,7 @@ p {
 
 .images{
   border: 3px black solid;
-  margin: 5px;
+  margin: 30px;
   padding: 5px;
   background-position: center;
   background-size: contain;
@@ -54,7 +86,8 @@ p {
  }
 
  .EachRecipe {
-   margin-top: 10%;
+   background-color: rgba(0, 0, 0, 0.5);
+   margin-top: 5%;
    display: flex;
    overflow-y: hidden;
    overflow-x: auto;
@@ -64,12 +97,16 @@ p {
 .link {
   font-size: 25px;
   color: white;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: red;
 }
 
 .recipeTitle {
-  background-color: red;
-  color: black;
-  font-size: 25px;
+  color: white;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -81,6 +118,7 @@ p {
   font-size: 20px;
   background-color: #EBD4CB;
   cursor: pointer;
+  margin: 10px;
 }
 
 .inputIngredient:hover {
@@ -96,9 +134,7 @@ p {
   height: 40px;
   width: 90px;
   background-color: #00A6A6;
-  margin: 15px solid black;
   border-radius: 5px;
-  font-family: 'Raleway', serif;
   box-shadow: 3px 3px #00A6A6;
   cursor: pointer;
 }
@@ -122,10 +158,12 @@ a {
 }
 
 .inputTitle {
-  /* font-family: 'Black Ops One', cursive; */
   color: white;
-  font-size: 30px;
-  /* animation-iteration-count: infinite; */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 15px;
 }
 
 .inputArea {

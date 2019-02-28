@@ -10,7 +10,8 @@ function GetEachTitle(props) {
             <img className="EachImage" src={recipes.image_url} alt="" />
           </div>
           <p className="recipeTitle">{recipes.title}</p>
-          <a className="link" href={recipes.source_url}> Click</a>
+          <a className="link" href={recipes.source_url}> Get Full Recipe</a>
+          <p className="recipeTitle">Social Rank: {recipes.social_rank.toFixed(2)}</p>
         </div>
       ))}
     </div>

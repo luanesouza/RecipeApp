@@ -13,13 +13,13 @@ class MyRecipes extends Component {
   render() {
   return(
     <div className="MyRecipes">
-      <p>Title ✎ </p>
-      <input className="titleInput" type="text" />
-      <p>Ingredients ✎ </p>
-      <input className="ingInput" type="text" />
-      <p>Instructions ✎ </p>
-      <textarea className="instInput"/>
-      <input type="submit" value="Submit"/>
+        <p className="MyRecipesTitle">Title ✎ </p>
+        <input className="titleInput" type="text" />
+        <p className="MyRecipesTitle">Ingredients ✎ </p>
+        <input className="ingInput" type="text" />
+        <p className="MyRecipesTitle">Instructions ✎ </p>
+        <textarea className="instInput"/>
+        <input className="MyRecipesButton" type="submit" value="Submit"/>
     </div>
     )
   }
