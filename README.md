@@ -19,4 +19,7 @@ An app where the user can browse through different recipes and is able to access
 
 ## Home Page
 ![HomePage](homePage1.png)
+
+## Search Results
+![HomePage](/images/HomePage.png)
 ## Issues encountered
