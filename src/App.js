@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import getRecipes from './services/api-helper';
-import Header from './components/Header';
 import HomePage from './components/HomePage';
 import MyRecipes from './components/MyRecipes';
 import { Route, Link } from 'react-router-dom';
@@ -40,13 +39,13 @@ class App extends Component {
             <Link to="/">
               <img
               className="home"
-              src="http://www.clker.com/cliparts/u/j/K/w/1/5/home-icon-md.png"
+              src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-512.png"
               alt=""/>
             </Link>
             <Link to="/myRecipes">
               <img
               className="home"
-              src="http://icongal.com/gallery/image/43845/notes_add.png"
+              src="http://cdn.onlinewebfonts.com/svg/img_328479.png"
               alt="" />
             </Link>
           </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 function GetEachTitle(props) {
-  const { recipes, mainIngredient } = props;
+  const { recipes } = props;
   return (
     <div className="EachRecipe">
       {recipes.map((recipes) => (

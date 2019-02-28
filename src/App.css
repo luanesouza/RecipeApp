@@ -3,10 +3,10 @@
 }
 
 .wrapper {
-  background-image: url("https://cdn.fstoppers.com/styles/full/s3/media/2017/09/11/autumn_food_photography_0.jpg");
+  background-image: url('https://paleoglutenfree.com/wp-content/uploads/2016/06/dsc_9417.jpg');
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position:right;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,20 +15,19 @@
 
 .icons {
   display: flex;
-  justify-content:space-around;
-  background-color: black;
+  justify-content: space-around;
+  background-color: rgba(255,255,255, .7);
 }
 
 .home{
  width: 55px;
- margin: 10%;
+ margin: 25%;
 }
 
 .MyRecipes {
-  background-image: url('http://febreframeworks.com/wp-content/uploads/stephaniebough_food18.jpg');
-  background-repeat: no-repeat;
+  background-image: url('https://i.pinimg.com/originals/86/68/71/866871b98c6f038ecdf02bc448b07ffa.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -68,12 +67,15 @@
 }
 
 p {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .images{
-  border: 3px black solid;
+  border: 10px solid;
+  border-color: rgb(255,255,255, .7);
+  border-radius: 5px;
+  background-color: rgb(255,255,255, .7);
   margin: 30px;
   padding: 5px;
   background-position: center;
@@ -81,12 +83,13 @@ p {
  }
 
  .EachImage {
-   height: 400px;
+   border-radius: 5px;
+   height: 300px;
    width: 300px;
  }
 
  .EachRecipe {
-   background-color: rgba(0, 0, 0, 0.5);
+   background-color: rgba(0, 0, 0, 0.3);
    margin-top: 5%;
    display: flex;
    overflow-y: hidden;
@@ -96,7 +99,7 @@ p {
 
 .link {
   font-size: 25px;
-  color: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -105,7 +108,7 @@ p {
 }
 
 .recipeTitle {
-  color: white;
+  color: black;
   font-size: 20px;
   text-align: center;
 }
@@ -116,13 +119,14 @@ p {
   text-align: center;
   padding: 5px;
   font-size: 20px;
-  background-color: #EBD4CB;
+  background-color: rgba(255,255,240, .8);
+  border: 3px solid rgba(0,0,0, .5);
   cursor: pointer;
   margin: 10px;
 }
 
 .inputIngredient:hover {
-  border-color: #FFA630;
+  border-color: rgba(129, 207, 224, 1);
 }
 
 .header {
@@ -133,9 +137,9 @@ p {
   font-size: 20px;
   height: 40px;
   width: 90px;
-  background-color: #00A6A6;
+  background-color: rgba(253,	231,76, .8);
   border-radius: 5px;
-  box-shadow: 3px 3px #00A6A6;
+  box-shadow: 3px 3px rgba(253,	231,76, .5);
   cursor: pointer;
 }
 
@@ -154,21 +158,20 @@ nav {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: white;
+  color: black;
 }
 
 .inputTitle {
-  color: white;
+  color: black;
   font-family: 'Orbitron', sans-serif;
   font-size: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   margin: 15px;
 }
 
 .inputArea {
   text-align: center;
-  background-image: url("https://cdn.fstoppers.com/styles/full/s3/media/2017/09/11/autumn_food_photography_0.jpg");
+  /* background-image: url("https://cdn.fstoppers.com/styles/full/s3/media/2017/09/11/autumn_food_photography_0.jpg"); */
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

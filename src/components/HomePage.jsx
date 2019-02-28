@@ -1,5 +1,4 @@
 import React from 'react';
-
 import GetEachTitle from './GetEachTitle';
 
 function HomePage(props) {
@@ -8,7 +7,7 @@ function HomePage(props) {
     <div className="inputArea">
       <form className="fixedInput">
         <h3 className="inputTitle">
-        SEARCH RECIPES
+        SEARCH RECIPES BY INGREDIENTS
         </h3>
         <input
         className="inputIngredient"
@@ -21,7 +20,7 @@ function HomePage(props) {
         <input
         className="submitIngredient"
         type="submit"
-        value="Submit"
+        value="Search"
         onClick={(ev) => {
           ev.preventDefault();
           logInput(mainIngredient);
