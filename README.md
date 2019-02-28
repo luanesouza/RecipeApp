@@ -21,5 +21,5 @@ An app where the user can browse through different recipes and is able to access
 ![HomePage](homePage1.png)
 
 ## Search Results
-![HomePage](/images/HomePage.png)
+![HomePage](/images/homePage.png)
 ## Issues encountered
