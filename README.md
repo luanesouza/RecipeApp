@@ -35,4 +35,6 @@ The palette I went with is a combination of neutral colors, which makes so that 
 
 ![HomePage](/images/homePage.png)
 
-## Issues encountered
+## Deployed App
+
+http://recipes-app.surge.sh/
