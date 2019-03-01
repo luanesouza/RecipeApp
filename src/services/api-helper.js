@@ -1,6 +1,7 @@
 import axios from 'axios';
 const BASE_URL = `https://www.food2fork.com/api/search?key=`;
-const API_KEY = `78df59383247d284adbe0d6d8a40e094`;
+// const API_KEY = `78df59383247d284adbe0d6d8a40e094`;
+const API_KEY = `6598e71afb10fe0eb40b8e86b29cd0c6`;
 
   async function getRecipes(mainIngredient){
   try {

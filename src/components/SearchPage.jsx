@@ -26,7 +26,7 @@ function SearchPage(props) {
           logInput(mainIngredient);
         }} />
       </form>
-      <GetEachTitle recipes={props.recipes} />
+      <GetEachTitle saveRecipe={props.saveRecipe} recipes={props.recipes} />
     </div>
   )
 }

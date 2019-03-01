@@ -1,27 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 
+function MyRecipes(props) {
+  const { myRecipes } = props;
 
-class MyRecipes extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: '',
-      ingredients: '',
-      instructions: ''
-    }
-  }
-  render() {
   return(
-    <div className="MyRecipes">
-        <p className="MyRecipesTitle">Title ✎ </p>
-        <input className="titleInput" type="text" />
-        <p className="MyRecipesTitle">Ingredients ✎ </p>
-        <input className="ingInput" type="text" />
-        <p className="MyRecipesTitle">Instructions ✎ </p>
-        <textarea className="instInput"/>
-        <input className="MyRecipesButton" type="submit" value="Submit"/>
+    <div className="MyRecipes" key={myRecipes.length}>
+      {myRecipes.map((recipe) => (
+        <div>
+          <p className="myRecipeTitle">{recipe.title}</p>
+          <img className="myRecipeImg" src={recipe.image_url} />
+          <a href={recipe.source_url} />
+          <p>Social Rank: {recipe.social_rank} </p>
+
+        </div>
+      ))}
     </div>
+
     )
-  }
 }
 export default MyRecipes;

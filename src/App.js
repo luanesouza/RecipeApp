@@ -11,10 +11,12 @@ class App extends Component {
     super();
     this.state = {
       recipes: [],
-      mainIngredient:''
+      mainIngredient:'',
+      myRecipes: []
     }
     this.getInput = this.getInput.bind(this);
     this.logInput = this.logInput.bind(this);
+    this.saveRecipe = this.saveRecipe.bind(this);
   }
   getInput(ev){
     const { name, value } = ev.target
@@ -30,6 +32,16 @@ class App extends Component {
     })
     console.log(recipes);
     console.log(this.state.mainIngredient);
+  }
+
+  saveRecipe(recipe) {
+    this.setState(prevState => ({
+      myRecipes: [
+        ...prevState.myRecipes,
+        recipe
+      ]
+    }))
+    console.log(this.state.myRecipes);
   }
 
   render() {
@@ -66,9 +78,14 @@ class App extends Component {
                 getInput={this.getInput}
                 logInput={this.logInput}
                 mainIngredient={this.state.mainIngredient}
-                recipes={this.state.recipes}/>
+                recipes={this.state.recipes}
+                saveRecipe={this.saveRecipe}
+                />
               )}/>
-              <Route path="/myRecipes" component={MyRecipes} />
+              <Route path="/myRecipes" render={(props) => (
+                <MyRecipes {...props}
+                myRecipes={this.state.myRecipes} />
+              )} />
           </main>
         </div>
       </div>
