@@ -30,8 +30,6 @@ class App extends Component {
     this.setState({
       recipes
     })
-    console.log(recipes);
-    console.log(this.state.mainIngredient);
   }
 
   saveRecipe(recipe) {
@@ -41,7 +39,6 @@ class App extends Component {
         recipe
       ]
     }))
-    console.log(this.state.myRecipes);
   }
 
   render() {

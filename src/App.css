@@ -31,11 +31,6 @@
   justify-content: space-around;
   background-color: rgba(255,255,255, .7);
 }
-
-/* .rec:hover {
-  border: 3px solid grey;
-} */
-
 .home{
  width: 55px;
  margin: 25%;
@@ -46,10 +41,16 @@
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  text-align: center;
   height: 100vh;
+}
+
+
+.myRecipeTitle {
+  color: black;
+  font-size: 32px;
+  text-shadow: 2px 1px lightgrey;
+  text-align: center;
 }
 
 p {
@@ -57,6 +58,7 @@ p {
   font-family: 'PT Serif', serif;
 }
 
+/*  */
 .images{
   border: 10px solid;
   border-color: rgb(255,255,255, .7);
@@ -81,11 +83,12 @@ p {
    overflow-y: hidden;
    overflow-x: auto;
    text-align: center;
+   text-decoration: none;
  }
 
 .link {
   display: block;
-  font-size: 20px;
+  font-size: 25px;
   color: black;
   cursor: pointer;
   font-family: 'PT Serif', serif;
@@ -104,8 +107,8 @@ p {
 .recipeTitle {
   display: inline-block;
   color: black;
-  font-size: 22px;
-  text-shadow: 2px 1px grey;
+  font-size: 32px;
+  text-shadow: 2px 1px lightgrey;
   text-align: center;
 }
 
@@ -126,6 +129,22 @@ p {
 border-color: rgba(255, 255, 255, 1);
 }
 
+.saveBtt {
+  font-size: 20px;
+  height: 40px;
+  width: 190px;
+  font-family: 'PT Serif', serif;
+  background-color: rgba(30, 130, 76, 1);
+  border-radius: 5px;
+  color: white;
+  border: 2px solid rgba(189, 195, 199, 1);
+  box-shadow: 3px 3px rgba(100, 125, 199, 1);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+
+/*  SOMETHING ELSE */
 .header {
   margin: 5px;
 }
@@ -171,14 +190,7 @@ a {
 
 .inputArea {
   text-align: center;
-  /* background-image: url("https://cdn.fstoppers.com/styles/full/s3/media/2017/09/11/autumn_food_photography_0.jpg"); */
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
 }
-
-/* .Inspiration a:hover{
-  background-color: #fdffea;
-  opacity: .5;
-  color: black;
-} */
